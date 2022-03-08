@@ -110,7 +110,7 @@
                     </a>
                 </button>
 
-                <ul>
+                <ul class="social__link">
                     <li>
                         <a href="#">FOLLOW US</a>
                     </li>  
@@ -189,7 +189,43 @@ export default {
 
     .footer__social {
         background-color: var(--app-heavy-grey);
-        min-height: 100px;
+        padding: 30px 10px;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        
+            button {
+            text-transform: uppercase;
+            background-color: transparent;
+            border: 2px solid;
+            border-color: var(--app-blue);
+            padding: 8px;
+            
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 600;
+                
+                }
+            }
+
+            .social__link {
+                display: flex;
+                align-items: center;
+                gap: 18px;
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    color: var(--app-blue);
+                    font-weight: 600;
+                }
+            }
+        }
+
+        
     }
 }
 </style>
