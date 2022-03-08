@@ -2,7 +2,6 @@
   <div id="app">
     <PageHeader />
     <PageMain />
-    <PageBanner />
     <PageFooter />
 
   </div>
@@ -11,7 +10,6 @@
 <script>
 import PageHeader from './components/PageHeader.vue'
 import PageMain from './components/PageMain.vue'
-import PageBanner from './components/PageBanner.vue'
 import PageFooter from './components/PageFooter.vue'
 
 export default {
@@ -19,7 +17,6 @@ export default {
   components: {
     PageHeader,
     PageMain,
-    PageBanner,
     PageFooter
   }
 }
@@ -33,7 +30,7 @@ export default {
 }
 
 .container {
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -42,5 +39,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  --app-blue: #0282F9;
 }
 </style>

@@ -85,7 +85,7 @@ export default {
             text-decoration: none;
             color: currentColor;
             font-weight: 600;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
         }
       }
     }

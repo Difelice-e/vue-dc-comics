@@ -3,12 +3,19 @@
         <div class="container">
             <h2>{{ text }}</h2>
         </div>
+
+        <PageBanner />
     </main>
 </template>
 
 <script>
+import PageBanner from './PageBanner.vue'
+
 export default {
     name: 'PageMain',
+    components: {
+        PageBanner
+    },
     data() {
         return {
             text: '--> Content goes here <--'
