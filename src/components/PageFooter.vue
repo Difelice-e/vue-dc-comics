@@ -104,7 +104,42 @@
 
         <div class="footer__social">
             <div class="container">
+                <button>
+                    <a href="#">
+                        Sign-up now!
+                    </a>
+                </button>
 
+                <ul>
+                    <li>
+                        <a href="#">FOLLOW US</a>
+                    </li>  
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/footer-facebook.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/footer-twitter.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/footer-youtube.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/footer-pinterest.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/footer-periscope.png" alt="">
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </footer>
