@@ -7,35 +7,8 @@
 
       <nav class="main-nav">
         <ul>
-          <li class="nav__item">
-            <a href="#">Characters</a>
-          </li>
-          <li class="nav__item active">
-            <a href="#">Comics</a>
-          </li>
-          <li class="nav__item">
-            <a href="#">Movies</a>
-          </li>
-          <li class="nav__item">
-            <a href="#">Tv</a>
-          </li>
-          <li class="nav__item">
-            <a href="#">Games</a>
-          </li>
-          <li class="nav__item">
-            <a href="#">Collectibles</a>
-          </li>
-          <li class="nav__item">
-            <a href="#">Videos</a>
-          </li>
-          <li class="nav__item">
-            <a href="#">Fans</a>
-          </li>
-          <li class="nav__item">
-            <a href="#">News</a>
-          </li>
-          <li class="nav__item">
-            <a href="#">Shop</a>
+          <li v-for="(item, i) in navLink" :key="i"  class="nav__item">
+            <a :href="item.href">{{ item.id }}</a>
           </li>
         </ul>
       </nav>
@@ -46,6 +19,52 @@
 <script>
 export default {
   name: "PageHeader",
+  data() {
+    return {
+      navLink: [
+        {
+          id: 'Characters',
+          href: '#'
+        },
+        {
+          id: 'Comics',
+          href: '#'
+        },
+        {
+          id: 'Movies',
+          href: '#'
+        },
+        {
+          id: 'Tv',
+          href: '#'
+        },
+        {
+          id: 'Games',
+          href: '#'
+        },
+        {
+          id: 'Collectibles',
+          href: '#'
+        },
+        {
+          id: 'Videos',
+          href: '#'
+        },
+        {
+          id: 'Fans',
+          href: '#'
+        },
+        {
+          id: 'News',
+          href: '#'
+        },
+        {
+          id: 'Shop',
+          href: '#'
+        },
+      ]
+    }
+  }
 };
 </script>
 
