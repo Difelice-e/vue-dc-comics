@@ -65,6 +65,12 @@ export default {
                 gap: 10px;
                 width: 20%;
 
+                &:last-child {
+                    img {
+                        height: 45px;
+                    }
+                }
+
                 a {
                     color: white;
                     text-decoration: none;
@@ -75,12 +81,9 @@ export default {
                     img {
                     height: 60px;
 
-                    &:last-child {
-                        height: 40px;
                     }
                     
                     
-                }
                 }
                 
             }

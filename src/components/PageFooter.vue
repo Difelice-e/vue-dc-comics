@@ -227,6 +227,10 @@ export default {
                     color: #626F7C;
                     text-decoration: none;
                     font-size: 0.7rem;
+
+                    &:hover {
+                        color: var(--app-blue);
+                    }
                 }
             }
         }

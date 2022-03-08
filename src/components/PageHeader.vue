@@ -105,6 +105,10 @@ export default {
             color: currentColor;
             font-weight: 600;
             font-size: 0.7rem;
+
+            &:hover {
+              color: var(--app-blue);
+            }
         }
       }
     }
