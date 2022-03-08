@@ -28,7 +28,7 @@
                 </li>
                 <li class="item">
                     <a href="#">
-                        <img src="../assets/img/buy-comics-digital-comics.png" alt="">
+                        <img class="svg" src="../assets/img/buy-dc-power-visa.svg" alt="">
                         DC Power Visa
                     </a>
                 </li>
@@ -72,6 +72,11 @@ export default {
                     
                     img {
                     height: 60px;
+
+                    &.svg {
+                        height: 40px;
+                    }
+                    
                 }
                 }
                 

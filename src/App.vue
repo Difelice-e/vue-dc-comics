@@ -40,5 +40,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   --app-blue: #0282F9;
+  --app-heavy-grey: #303030;
 }
 </style>
