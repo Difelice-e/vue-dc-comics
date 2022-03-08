@@ -3,100 +3,13 @@
         <div class="footer__link">
             <div class="container">
                 <ul class="nav__menu">
-                    <li>
-                        <h4>DC Comics</h4>
+                    <li v-for="(item, i) in footerMenu" :key="i">
+                        <h4>{{item.title}}</h4>
                         <ul class="nav__link">
-                            <li>
-                                <a href="#">Characters</a>
-                            </li>  
-                            <li>
-                                <a href="#">Comics</a>
+                            <li v-for="(link, i) in item.links" :key="i">
+                                <a :href="link.href">{{ link.name }}</a>
                             </li>
-                            <li>
-                                <a href="#">Movies</a>
-                            </li>
-                            <li>
-                                <a href="#">TV</a>
-                            </li>
-                            <li>
-                                <a href="#">Games</a>
-                            </li>
-                            <li>
-                                <a href="#">Videos</a>
-                            </li>
-                            <li>
-                                <a href="#">News</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h4>Shop</h4>
-                        <ul class="nav__link">
-                            <li>
-                                <a href="#">Shop DC</a>
-                            </li>
-                            <li>
-                                <a href="#">Shop DC Collectibles</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h4>DC</h4>
-                        <ul class="nav__link">
-                            <li>
-                                <a href="#">Terms Of Use</a>
-                            </li>
-                            <li>
-                                <a href="#">Privacy policy (New)</a>
-                            </li>
-                            <li>
-                                <a href="#">Ad Choices</a>
-                            </li>
-                            <li>
-                                <a href="#">Advertising</a>
-                            </li>
-                            <li>
-                                <a href="#">Jobs</a>
-                            </li>
-                            <li>
-                                <a href="#">Subscriptions</a>
-                            </li>
-                            <li>
-                                <a href="#">Talent Workshops</a>
-                            </li>
-                            <li>
-                                <a href="#">CPSC Certificates</a>
-                            </li>
-                            <li>
-                                <a href="#">Ratings</a>
-                            </li>
-                            <li>
-                                <a href="#">Shop Help</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact Us</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h4>Sites</h4>
-                        <ul class="nav__link">
-                            <li>
-                                <a href="#">DC</a>
-                            </li>
-                            <li>
-                                <a href="#">MAD Magazine</a>
-                            </li>
-                            <li>
-                                <a href="#">DC Kids</a>
-                            </li>
-                            <li>
-                                <a href="#">DC Universe</a>
-                            </li>
-                            <li>
-                                <a href="#">DC Power Visa</a>
-                            </li>
-                        </ul>
+                        </ul>      
                     </li>
                 </ul>
             </div>
@@ -114,29 +27,9 @@
                     <li>
                         <a href="#">FOLLOW US</a>
                     </li>  
-                    <li>
-                        <a href="#">
-                            <img src="../assets/img/footer-facebook.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../assets/img/footer-twitter.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../assets/img/footer-youtube.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../assets/img/footer-pinterest.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../assets/img/footer-periscope.png" alt="">
+                    <li v-for="(item, i) in socialMenu" :key="i">
+                        <a :href="item.href">
+                            <img :src="require(`../assets/img/${item.icon}`)" alt="">
                         </a>
                     </li>
                 </ul>
@@ -147,7 +40,160 @@
 
 <script>
 export default {
-    name: 'PageFooter'
+    name: 'PageFooter',
+    data() {
+        return {
+            footerMenu: [
+                {
+                    title: 'DC Comics',
+                    links: [
+                        {
+                            name: 'Characters',
+                            href: '#'
+                        },
+                        {
+                            name: 'Comics',
+                            href: '#'
+                        },
+                        {
+                            name: 'Movies',
+                            href: '#'
+                        },
+                        {
+                            name: 'TV',
+                            href: '#'
+                        },
+                        {
+                            name: 'Games',
+                            href: '#'
+                        },
+                        {
+                            name: 'Videos',
+                            href: '#'
+                        },
+                        {
+                            name: 'News',
+                            href: '#'
+                        },
+                    ]
+                },
+                {
+                    title: 'Shop',
+                    links: [
+                        {
+                            name: 'Shop DC',
+                            href: '#'
+                        },
+                        {
+                            name: 'Shop DC Collectibles',
+                            href: '#'
+                        },
+                    ]
+                },
+                {
+                    title: 'DC',
+                    links: [
+                        {
+                            name: 'CTerms Of Use',
+                            href: '#'
+                        },
+                        {
+                            name: 'Privacy Policy (new)',
+                            href: '#'
+                        },
+                        {
+                            name: 'Ad Choices',
+                            href: '#'
+                        },
+                        {
+                            name: 'Advertising',
+                            href: '#'
+                        },
+                        {
+                            name: 'Jobs',
+                            href: '#'
+                        },
+                        {
+                            name: 'Subscriptions',
+                            href: '#'
+                        },
+                        {
+                            name: 'Talent Workshops',
+                            href: '#'
+                        },
+                        {
+                            name: 'CPSC Certificates',
+                            href: '#'
+                        },
+                        {
+                            name: 'Ratings',
+                            href: '#'
+                        },
+                        {
+                            name: 'Shop Help',
+                            href: '#'
+                        },
+                        {
+                            name: 'Contact Us',
+                            href: '#'
+                        },
+                    ]
+                },
+                {
+                    title: 'Sites',
+                    links: [
+                        {
+                            name: 'DC',
+                            href: '#'
+                        },
+                        {
+                            name: 'MAD Magazine',
+                            href: '#'
+                        },
+                        {
+                            name: 'DC Kids',
+                            href: '#'
+                        },
+                        {
+                            name: 'DC Universe',
+                            href: '#'
+                        },
+                        {
+                            name: 'DC Power Visa',
+                            href: '#'
+                        },
+                    ]
+                },
+            ],
+            socialMenu: [
+                {
+                    name: 'facebook',
+                    href: '#',
+                    icon: 'footer-facebook.png'
+                },
+                {
+                    name: 'twitter',
+                    href: '#',
+                    icon: 'footer-twitter.png'
+                },
+                {
+                    name: 'youtube',
+                    href: '#',
+                    icon: 'footer-youtube.png'
+                },
+                {
+                    name: 'pinterest',
+                    href: '#',
+                    icon: 'footer-pinterest.png'
+                },
+                {
+                    name: 'periscope',
+                    href: '#',
+                    icon: 'footer-periscope.png'
+                },
+            ]
+        }
+    }
 }
 </script>
 

@@ -2,36 +2,12 @@
     <div class="banner">
         <div class="container-s">
             <ul>
-                <li class="item">
+                <li v-for="(item, i) in bannerItems" :key="i" class="item">
                     <a href="#">
-                        <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                        Digital Comics
+                        <img :src="require(`../assets/img/${item.img}`)" alt="">
+                        {{ item.name }}
                     </a>    
                 </li>  
-                <li class="item">
-                    <a href="#">
-                        <img src="../assets/img/buy-comics-merchandise.png" alt="">
-                        DC Merchandise
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="#">
-                        <img src="../assets/img/buy-comics-subscriptions.png" alt="">
-                        Subscription
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="#">
-                        <img src="../assets/img/buy-comics-shop-locator.png" alt="">
-                        Comic Shop Location
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="#">
-                        <img class="svg" src="../assets/img/buy-dc-power-visa.svg" alt="">
-                        DC Power Visa
-                    </a>
-                </li>
             </ul>
         </div>
     </div>
@@ -39,7 +15,33 @@
 
 <script>
 export default {
-    name: 'PageBanner'
+    name: 'PageBanner',
+    data() {
+        return {
+            bannerItems: [
+                {
+                    name: 'Digital Comics',
+                    img: 'buy-comics-digital-comics.png'
+                },
+                {
+                    name: 'DC Merchandise',
+                    img: 'buy-comics-merchandise.png'
+                },
+                {
+                    name: 'Subscription',
+                    img: 'buy-comics-subscriptions.png'
+                },
+                {
+                    name: 'Comic Shop Location',
+                    img: 'buy-comics-shop-locator.png'
+                },
+                {
+                    name: 'DC Power Visa',
+                    img: 'buy-dc-power-visa.svg'
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -73,9 +75,10 @@ export default {
                     img {
                     height: 60px;
 
-                    &.svg {
+                    &:last-child {
                         height: 40px;
                     }
+                    
                     
                 }
                 }
