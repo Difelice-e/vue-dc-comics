@@ -202,7 +202,14 @@ export default {
 
     .footer__link {
         background-image: url('../assets/img/footer-bg.jpg');
-        padding: 30px 10px 50px;
+        
+
+        .container {
+            background-image: url('../assets/img/dc-logo-bg.png');
+            background-repeat: no-repeat;
+            background-position: right;
+            padding: 30px 10px 50px;
+        }
 
         .nav__menu {
             display: flex;
